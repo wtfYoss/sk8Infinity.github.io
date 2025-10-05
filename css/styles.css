@@ -42,7 +42,8 @@ body::before{
     padding: 10px 40px;
     background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index:10;
 }
 .logo-img{
@@ -104,7 +105,7 @@ body::before{
 .sidebar-nav{
     width: 280px;
     padding: 30px 0 0 40px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-nav nav{
     padding-right: 20px;
@@ -120,7 +121,15 @@ body::before{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: color 0.3;
+    transition: color 0.3s;
+}
+.sidebar-nav ul li a.active-link{
+    background-color: #38b000;
+    color: var(--color-text-light);
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-left: -40px;
+    pointer-events: none;
 }
 .sidebar-nav ul li a:hover{
     color: var(--color-text-muted);
@@ -129,9 +138,7 @@ body::before{
     margin-top: 50px;
 }
 .btn-new{
-    background: #38FF38;
-    background: linear-gradient(110deg, rgba(56, 255, 56, 1) 0%, rgba(0, 66, 8, 1) 50%, rgba(0, 0, 0, 1) 100%);
-    opacity: 0.5;
+    background: linear-gradient(110deg,rgba(56, 255, 56, 1) 0%, rgba(0, 66, 8, 1) 50%, rgba(0, 0, 0, 0.59) 100%);
     color: black;
     font-weight: 700;
     font-size: 18px;
@@ -140,10 +147,11 @@ body::before{
     text-align: left;
     margin-bottom: 20px;
     text-transform: uppercase;
-    transition: background-color 0.3;
+    transition: background-color 0.3s;
 }
 .btn-new:hover{
     background-color: #55c81f;
+    transform: translate(15px);
 }
 .btn-sale{
     display: block;
@@ -151,7 +159,7 @@ body::before{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: color 0.3;
+    transition: color 0.3s;
 }
 .btn-sale:hover{
     color:var(--color-text-muted); ;
@@ -163,7 +171,7 @@ body::before{
     letter-spacing: 1px;
     color: var(--color-text-light);
     text-transform: uppercase;
-    transition: color 0.3;
+    transition: color 0.3s;
 }
 .my-account:hover{
     color: var(--color-text-muted);
@@ -173,7 +181,7 @@ body::before{
     padding: 30px 40px;
 }
 .hero-banner{
-    text-align: left;
+    text-align: Center;
     padding: 30px 0 50px;
 }
 .hero-banner h2{
@@ -193,13 +201,66 @@ body::before{
     gap: 30px;
 }
 .product-card{
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     text-align: center;
+    height: 450px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.product-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5)
 }
 .product-image{
     width: 100%;
+    height: 85%;
     object-fit: cover;
     display: block;
     border-radius: 10px;
+}
+.product-name{
+    margin-top: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.product-price{
+    font-size: 16px;
+}
+.product-detail-card{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    background-color: 1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.detail-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-title-large{
+    font-family: var(--font-heading);
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+.product-title-large strong{
+    font-size: 70px;
+}
+.product-description{
+    font-family: var(--font-menu);
+    font-size: 20px;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+}
+.product-price{
+    font-size: 30px;
+    margin-bottom: 30px;
 }
