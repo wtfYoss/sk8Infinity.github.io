@@ -1,0 +1,205 @@
+:root{
+    --color-background:#121212;
+    --color-text-light:#ffffff;
+    --color-text-muted: #aaaaaa;
+    --color-primary-green: #38b000;
+    --font-heading: 'Sedgwick Ave Display', cursive;
+    --font-body: 'Zen Dots', sans-serif;
+    --font-menu: 'Urbanist', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    min-height: 100vh;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index:10;
+}
+.logo-img{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #434242;
+    /*border: 1px solid var(--color-text-muted);*/
+    border-radius: 18px;
+    padding: 0;
+    width: 694px;
+    overflow: hidden;
+}
+.search-bar input{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 5px 10px 15px;
+    width: calc(100% - 40px);
+    outline: none;
+}
+.search-bar::after{
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    background-color: var(--color-background);
+}
+.search-icon{
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 15px;
+    filter: invert(1);
+    opacity: 0.7;
+}
+.header-icons{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+.header-icon{
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    transition: opacity 0.2s;
+}
+.main-content-wrapper{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: calc(100vh-80px);
+}
+.sidebar-nav{
+    width: 280px;
+    padding: 30px 0 0 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);;
+}
+.sidebar-nav nav{
+    padding-right: 20px;
+}
+.sidebar-nav ul{
+    list-style: none;
+    margin-bottom: 50px;
+}
+.sidebar-nav ul li a{
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3;
+}
+.sidebar-nav ul li a:hover{
+    color: var(--color-text-muted);
+}
+.sidebar-buttons{
+    margin-top: 50px;
+}
+.btn-new{
+    background: #38FF38;
+    background: linear-gradient(110deg, rgba(56, 255, 56, 1) 0%, rgba(0, 66, 8, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    opacity: 0.5;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 40px;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3;
+}
+.btn-new:hover{
+    background-color: #55c81f;
+}
+.btn-sale{
+    display: block;
+    padding: 15px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3;
+}
+.btn-sale:hover{
+    color:var(--color-text-muted); ;
+}
+.my-account{
+    display: block;
+    padding: 15px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    transition: color 0.3;
+}
+.my-account:hover{
+    color: var(--color-text-muted);
+}
+.product-showcase{
+    flex-grow: 1;
+    padding: 30px 40px;
+}
+.hero-banner{
+    text-align: left;
+    padding: 30px 0 50px;
+}
+.hero-banner h2{
+    font-family: var(--font-heading);
+    font-size: 90px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.hero-banner p{
+    font-size: 30px;
+    margin-left: 100px;
+}
+.product-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.product-card{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.product-image{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
