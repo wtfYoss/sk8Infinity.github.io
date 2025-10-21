@@ -12,6 +12,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*BACKGROUND*/
 body{
     font-family: var(--font-body);
     color: var(--color-text-light);
@@ -35,6 +36,7 @@ body::before{
     background-blend-mode: multiply;
     z-index: -1;
 }
+/*HEADER*/
 .main-header{
     display: flex;
     justify-content: space-between;
@@ -97,11 +99,13 @@ body::before{
     filter: invert(1);
     transition: opacity 0.2s;
 }
+/*BODY*/
 .main-content-wrapper{
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     min-height: calc(100vh-80px);
 }
+/* AQUI ESTA EL SIDEBAR*/
 .sidebar-nav{
     width: 280px;
     padding: 30px 0 0 40px;
@@ -176,6 +180,7 @@ body::before{
 .my-account:hover{
     color: var(--color-text-muted);
 }
+/*Aqui eempieza el hero-section*/
 .product-showcase{
     flex-grow: 1;
     padding: 30px 40px;
@@ -198,7 +203,7 @@ body::before{
 .product-grid{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 10px;
 }
 .product-card{
     display: flex;
@@ -208,10 +213,10 @@ body::before{
     height: 450px;
     padding-bottom: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 .product-card:hover{
-    transform: translateY(-5px);
+    transform: translateY(-40px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5)
 }
 .product-image{
@@ -233,7 +238,7 @@ body::before{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 40px;
-    background-color: 1a1a1a;
+    background-color: #1a1a1a;
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 50px;
@@ -264,3 +269,73 @@ body::before{
     font-size: 30px;
     margin-bottom: 30px;
 }
+.options-group{
+    margin-bottom: 25px;
+}
+.option-label{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+.size-options, .color-options{
+    display: flex;
+    gap: 10px;
+}
+.size-btn{
+    background:none;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.size-btn.active, .size-btn:hover{
+    background-color: var(--color-text-light);
+    color: var(--color-background);
+}
+.color-options{
+    display: flex;
+    gap: 10px;
+}
+.color-swatch{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: var(--color-code);
+    transition: border-color 0.2s;
+}
+.color-swatch.active{
+    border-color: #55c81f; 
+}
+.color-swatch:hover{
+    opacity: 0.5;
+}
+.add-to-cart-btn{
+    background-color: #ffc107;
+    color: var(--color-background);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 20px;
+    transition: opacity 0.2s;
+}
+.add-to-cart-btn:hover{
+    opacity: 0.7;
+}
+.product-list{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SK8 Urban Flow</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/hoodies.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
         <nav>
             <ul>
                 <li><a href="#">SNEAKERS</a></li>
-                <li><a href="hoodies.html" class="active-link">HOODIES</a></li>
+                <li><a href="hoodies.html" class="hoodies-highlight">HOODIES</a></li>
                 <li><a href="#">T-SHIRTS</a></li>
                 <li><a href="#">SKATEBOARDS</a></li>
             </ul>
@@ -41,17 +42,62 @@
         </nav>
     </aside>
     <main class="product-showcase">
-        <section class="product-detail-card">
-            <div class="product-image-area">
-                <img src="/img/modelHoodie.jpg" alt="Oversize Hoodie" class="detail-image">
-            </div>
-            <div class="product-info-area">
-                <h2 class="product-title-large">STREETWEAR <br> <strong>HOODIE</strong></h2>
-                <p class="product-description">Oversize Hoodie with front graphic and kangaroo pocket.</p>
-                <p class="product-price">$49.99</p>
-                
-            </div>
-        </section>
+        <div class="product-list">
+            <section class="product-detail-card">
+                <div class="product-image-area">
+                    <img src="/img/modelHoodie.jpg" alt="Oversize Hoodie" class="detail-image">
+                </div>
+                <div class="product-info-area">
+                    <h2 class="product-title-large">STREETWEAR <br> <strong>HOODIE</strong></h2>
+                    <p class="product-description">Oversize Hoodie with front graphic and kangaroo pocket.</p>
+                    <p class="product-price">$49.99</p>
+                    
+                    <div class="options-group">
+                        <p class="option-label">SIZE</p>
+                        <div class="size-options">
+                            <button class="size-btn active">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                        </div>
+                    </div>
+                    <div class="options-group">
+                        <p class="option-label">COLOR</p>
+                        <div class="color-options">
+                            <button class="color-swatch active" style="--color-code: #5cb85c;"></button>
+                            <button class="color-swatch" style="--color-code: #333333;"></button>
+                            <button class="color-swatch" style="--color-code: #f0ad4e;"></button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </section>
+            <section class="product-detail-card">
+                <div class="product-image-area">
+                    <img src="/img/modelHoodie2.jpg" alt="Alternative Hoodie" class="detail-image">
+                </div>
+                <div class="product-info-area">
+                    <h2 class="product-title-large">ALTERNATIVE <br> <strong>HOODIE</strong></h2>
+                    <p class="product-description">Classic Hooded Comfort Printing <br>Couple Wear Sweaters</p>
+                    <p class="product-price">$54.99</p>
+                    <div class="options-group">
+                        <p class="option-label">SIZE</p>
+                        <div class="size-options">
+                            <button class="size-btn active">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                        </div>
+                    </div>
+                    <div class="options-group">
+                        <p class="option-label">COLOR</p>
+                        <div class="color-options">
+                            <button class="color-swatch" style="--color-code: #333333;"></button>
+                            <button class="color-swatch" style="--color-code: #f1d2a5;"></button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">ADD TO CART</button>   
+                </div>  
+            </section>
+        </div>
     </main>
 </body>
-</html>|
+</html>

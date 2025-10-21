@@ -1,0 +1,26 @@
+
+.btn-new {
+    background: none !important;
+    color: var(--color-text-light) !important;
+    padding: 15px 0 !important; 
+    transform: none !important; 
+}
+.btn-new:hover {
+    color: var(--color-text-muted) !important;
+}
+.hoodies-highlight {
+    background: linear-gradient(110deg,rgba(56, 255, 56, 1) 0%, rgba(0, 66, 8, 1) 50%, rgba(0, 0, 0, 0.59) 100%);
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 40px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+.hoodies-highlight:hover{
+    background-color: #55c81f;
+    transform: translate(15px);
+}
