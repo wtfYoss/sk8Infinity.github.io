@@ -1,82 +1,90 @@
-@media (max-width: 480px){
-    .main-header {
-        justify-content: space-between;
-        padding: 10px 15px;
-        height: 60px; 
-        background-color: var(--color-background);
-        border-bottom: none;
-    }
-    .logo-img {
-        height: 40px; 
-    }
-    .search-bar, 
-    .header-icons {
-        display: none; 
-    }
-    .main-header .mobile-nav-links {
-        display: flex; 
-        gap: 20px;
-    }
-    .main-header .mobile-nav-links a {
-        font-family: var(--font-menu);
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: var(--color-text-light);
-    }
-    .sidebar-nav {
-        display: none; 
-    }
-    .main-content-wrapper, .mobile-showcase{
-        padding: 0;
-        min-height: auto;
-    }
-    .hero-banner-mobile {
-        background-image: url('/img/bg\ mobile.jpg'); 
-        background-size: cover;
-        background-position: center;
-        height: 40vh; 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 20px;
-        position: relative;
-    }
-    .hero-banner-mobile::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .hero-content {
-        position: relative;
-        z-index: 1;
-    }
-    .hero-banner-mobile h2 {
-        font-family: var(--font-heading);
-        font-size: 50px;
-        letter-spacing: 5px;
-        line-height: 1;
-        margin-bottom: 5px;
-    }
-    .hero-banner-mobile p {
-        font-family: var(--font-body);
-        font-size: 20px;
-        margin: 5px 0 15px;
-    }
-    .btn-buy-now {
-        background-color: #ffc107;
-        color: var(--color-background);
-        padding: 10px 30px;
-        font-weight: 700;
-        border-radius: 5px;
-        text-transform: uppercase;
-        display: inline-block;
-        border: none;
-    }
+:root{
+    --color-background:#121212;
+    --color-text-light:#ffffff;
+    --color-text-muted: #aaaaaa;
+    --color-primary-green: #38b000;
+    --color-primary-yellow: #f8c300; 
+    --font-heading: 'Sedgwick Ave Display', cursive;
+    --font-body: 'Zen Dots', sans-serif; 
+    --font-menu: 'Urbanist', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-menu); 
+    background-color: var(--color-background); 
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sk8 {
+    color: var(--color-primary-yellow);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.urban-flow {
+    font-family: var(--font-body); 
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: -5px;
+}
+
+.streetwear-title, .category-title, .hot-picks h2, .buy-now-btn {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    text-shadow: 
+        -1px -1px 0 #fff, 1px -1px 0 #fff,
+        -1px 1px 0 #fff, 1px 1px 0 #fff; 
+}
+
+.tagline {
+    font-family: var(--font-body); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.buy-now-btn {
+    background-color: var(--color-primary-yellow); 
+    color: #111;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 2px;
+    box-shadow: 0 4px 0 0 #a07d00;
+    transition: transform 0.1s;
+}
+
+.hot-picks {
+    background-color: var(--color-primary-green);
+    padding: 15px 20px;
+    text-align: center;
+    transform: translateY(-5px); 
+    position: relative;
 }

@@ -78,3 +78,18 @@
         display: block; 
     }
 }
+@media (max-width: 480px){
+    .hero-section {
+        height: 80vh;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .hero-section::after {
+        width: 60%;
+        right: -5%;
+    }
+}
